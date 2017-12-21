@@ -249,5 +249,6 @@ var songClass = (function () {
     getSongs: getSongs
   }
 
+  console.log("To test git branch repository")
 
 })();
