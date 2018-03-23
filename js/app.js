@@ -5,7 +5,6 @@ var encoreReference = new Firebase("https://encore-610ad.firebaseio.com/");
 var database = firebase.database();
 var trackReference = database.ref("/Playlist/").orderByChild('vote');
 
-
 //Object to add songs to the database
 function Song(name){
   this.name = name,
@@ -222,7 +221,6 @@ var songClass = (function () {
     })
   }
 
-
   function updateSongVote(id, vot) {
     // find message whose objectId is equal to the id we're searching with
     var songReference = new Firebase('https://encore-610ad.firebaseio.com/Playlist/' + id)
@@ -244,10 +242,7 @@ var songClass = (function () {
       songClass.getSongs();
   }
 
-  //returns the class
   return {
     getSongs: getSongs
   }
-
-
 })();
